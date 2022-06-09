@@ -156,11 +156,6 @@ SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'pfnPXY4mcbWJlsDxI93NZuNh' #Paste Secret Key
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (
-    # Don't forget to use absolute paths, not relative paths.
-    os.path.join(BASE_DIR, "static"),
-    os.path.join(BASE_DIR, "static\GiGi_Lyrics"), # this is for static/GiGi_Lyrics/main.css
-)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
