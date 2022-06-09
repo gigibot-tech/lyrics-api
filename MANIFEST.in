@@ -1,0 +1,3 @@
+include *.md
+recursive-include core/templates *
+recursive-include core/static *

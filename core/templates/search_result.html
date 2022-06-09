@@ -1,0 +1,68 @@
+{% extends 'layout.html' %}
+
+
+
+{% block head %}
+
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+
+
+{% endblock head %}
+
+{% block content%}
+
+
+
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th style="text-align: center;font-size: 1.2em" >
+            LYRICS | SONG: {{result_song}} | ARTIST: {{result_artist}}
+            <button class = "btn btn-primary black-background white btn-xs"
+           onclick="goBack()">Go Back</button></th>
+        <th> Lyrics Japanese</th>
+        <th> English Translation</th>
+        <th> Kanji Vocabulary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td style="text-align: center;font-size: 1.1em">{{lyrics| safe}}</td>
+          <td style="text-align: center;font-size: 1.1em">{{lyricsjp| safe}}</td>7
+          <td style="text-align: center;font-size: 1.1em">{{lyricseng| safe}}</td>
+          <td style="text-align: center;font-size: 0.1em">
+            <iframe name="iframe1" id="iframe1" title="SL_Operator_Dashboard_ui_next" width="440" height="141.25" 
+            src="moz-extension://6732ac26-4590-45b1-8e98-6c31e161d7d8/popup.html?type=terms&query=%E9%87%91&wildcards=off" 
+            frameborder="0" allowFullScreen="true"></iframe>
+            <iframe name="iframe1" id="iframe1" title="SL_Operator_Dashboard_ui_next" width="440" height="241.25" 
+            src="moz-extension://6732ac26-4590-45b1-8e98-6c31e161d7d8/popup.html?type=terms&query={{kanji_1}}" 
+            frameborder="0" allowFullScreen="true"></iframe>
+            <iframe name="iframe1" id="iframe1" title="SL_Operator_Dashboard_ui_next" width="440" height="200" 
+            src="moz-extension://6732ac26-4590-45b1-8e98-6c31e161d7d8/popup.html?type=terms&query={{kanji_2}}"
+            frameborder="0" allowFullScreen="true"></iframe>
+
+          </td>
+      </tr>
+
+
+<!--onclick="return deleteItem() return is must-->
+
+
+    </tbody>
+  </table>
+
+<p align="center">
+<button class = "btn btn-primary black-background white btn-xs"
+           onclick="goBack()">Go Back</button>
+</p>
+{% endblock %}
+
+
+
+
+1

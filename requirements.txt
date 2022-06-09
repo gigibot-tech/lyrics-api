@@ -1,0 +1,9 @@
+Django==3.2.8
+django-bootstrap4
+django-crispy-forms
+social-auth-app-django
+python-jose
+lxml
+djangorestframework
+django-cors-headers
+urllib3

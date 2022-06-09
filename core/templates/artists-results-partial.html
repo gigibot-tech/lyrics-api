@@ -1,0 +1,64 @@
+{% if artists %}
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>ARTIST</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for artist in artists %}
+      <tr>
+          <td>{{artist.name}}</td>
+          <td>
+              <a href="/results?song_url={{row.song_url}}&song_name={{row.song_name}}&song_artist={{row.song_artist}}"
+                 class = "btn btn-primary black-background white btn-xs">GET LYRICS</a>
+          </td>
+      </tr>
+
+<!--onclick="return deleteItem() return is must-->
+    {%endfor%}
+
+    </tbody>
+  </table>
+
+  {% else %}
+    <p>No artists found.</p>
+    {% endif %}
+
+
+
+
+
+
+
+  {% if results|length > 0 %}
+
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>RESULTS</th>
+        <th>SONG</th>
+        <th>ARTIST</th>
+        <th>ACTION</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in results %}
+      <tr>
+          <td>{{row.song_id}}</td>
+          <td>{{row.song_name}}</td>
+          <td>{{row.song_artist}}</td>
+          <td>
+              <a href="/results?song_url={{row.song_url}}&song_name={{row.song_name}}&song_artist={{row.song_artist}}"
+                 class = "btn btn-primary black-background white btn-xs">GET LYRICS</a>
+          </td>
+      </tr>
+
+<!--onclick="return deleteItem() return is must-->
+
+    {%endfor%}
+
+    </tbody>
+  </table>
+
+{% endif %}
